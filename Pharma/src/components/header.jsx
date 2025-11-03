@@ -1,10 +1,12 @@
+import "./header.css";
+
 import React, { useEffect, useRef } from "react";
 // Đã loại bỏ useState và logic dropdown, cuộn để gọi từ index.js
 import {
   initializeHeaderScrollLogic,
   initializeProductDropdownLogic,
   initializeNavigationLogic,
-} from "../index/index.js"; // Thay đổi đường dẫn import nếu cần
+} from "../pages/index.js"; // Thay đổi đường dẫn import nếu cần
 
 export function Header() {
   // 1. Dùng useRef để tham chiếu đến các phần tử DOM
@@ -39,7 +41,7 @@ export function Header() {
         <img src="images/logo.png" alt="" />
       </div>
       <nav className="navigation">
-        <a href="/contact/contact.html">Contact</a>
+        <a href="/Contact">Contact</a>
         <a
           href="/product/product.html"
           className="product"

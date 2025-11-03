@@ -1,38 +1,37 @@
 import "./index.css";
-import { Header } from "../components/header";
-// import React, { useEffect } from "react";
+import { Header } from "../components/header.jsx";
+import React, { useEffect } from "react";
 
-// import {
-//   initializeCarouselLogic,
-//   initializeNavigationLogic, // Cần thêm vào Index nếu bạn muốn xử lý click map ở đây
-// } from "./index.js";
-// import { Header } from "../components/header.jsx";
+import {
+  initializeCarouselLogic,
+  initializeNavigationLogic, // Cần thêm vào Index nếu bạn muốn xử lý click map ở đây
+} from "./index.js";
 
-// export function Index() {
-//   useEffect(() => {
-//     return initializeCarouselLogic(
-//       ".why-choice-slide",
-//       "prevBtn",
-//       "nextBtn",
-//       620
-//     );
-//   }, []); // [] đảm bảo chỉ chạy 1 lần sau khi mount
-
-//   // Gọi logic Carousel cho Feedback
-//   useEffect(() => {
-//     return initializeCarouselLogic(
-//       ".feedback-slide",
-//       "fb-prevBtn",
-//       "fb-nextBtn",
-//       720
-//     );
-//   }, []);
-
-//   // Gọi logic navigation (map) trong useEffect
-//   useEffect(() => {
-//     return initializeNavigationLogic();
-//   }, []);
 export function Index() {
+  useEffect(() => {
+    return initializeCarouselLogic(
+      ".why-choice-slide",
+      "prevBtn",
+      "nextBtn",
+      620
+    );
+  }, []); // [] đảm bảo chỉ chạy 1 lần sau khi mount
+
+  // Gọi logic Carousel cho Feedback
+  useEffect(() => {
+    return initializeCarouselLogic(
+      ".feedback-slide",
+      "fb-prevBtn",
+      "fb-nextBtn",
+      720
+    );
+  }, []);
+
+  // Gọi logic navigation (map) trong useEffect
+  useEffect(() => {
+    return initializeNavigationLogic();
+  }, []);
+
   return (
     <>
       <Header />
