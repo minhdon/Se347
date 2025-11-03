@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo" id="logo"><img src="/bg/logo.png" alt="" /></div>
+      <nav class="navigation">
+        <a href="/contact/contact.html">Contact</a>
+        <a href="/product/product.html" class="product" id="product"
+          >Product <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="list-product" id="listProduct">
+          <a href="">Tất cả sản phẩm</a>
+          <a href="">Thuốc theo đơn</a>
+          <a href="">Thuốc không theo đơn</a>
+          <a href="">Thực phẩm chức năng</a>
+          <a href="">Sản phẩm bán chạy</a>
+        </div>
+        <input
+          type="text"
+          class="find-product"
+          required
+          placeholder="Tìm tên thuốc"
+        />
+        <button class="btnLogin-popup">Login</button>
+        <button class="btnShoppingCart">
+          <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
+          <div class="number-of-product">11</div>
+        </button>
+      </nav>
+    </header>
+    <section class="hero-banner">
+      <div class="container">
+        <h1>Nhà thuốc tin cậy cho sức khỏe gia đình</h1>
+        <p>Tìm kiếm thuốc theo tên, hoạt chất hoặc triệu chứng</p>
+        <form class="search-form">
+          <input
+            type="text"
+            placeholder="Tìm thuốc, thực phẩm chức năng, thiết bị y tế..."
+          />
+          <button type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container page-content">
+      <section class="promo-banner">
+        <div class="promo-text">
+          <h2>Khuyến mãi đặc biệt</h2>
+          <p>Giảm giá 20% cho đơn hàng từ 500.000đ</p>
+          <a href="#" class="btn-primary">Mua ngay</a>
+        </div>
+        <div class="promo-image">
+          <img src="/bg/product/discount.png" alt="Sản phẩm khuyến mãi" />
+        </div>
+      </section>
+
+      <section class="categories">
+        <h2 class="section-title">Danh mục sản phẩm</h2>
+        <div class="category-grid">
+          <a href="#" class="category-card">
+            <i class="fa-solid fa-capsules"></i>
+            <h3>Thuốc không kê đơn</h3>
+            <p>Thuốc OTC an toàn</p>
+          </a>
+          <a href="#" class="category-card">
+            <i class="fa-solid fa-money-bills"></i>
+            <h3>Thuốc theo đơn</h3>
+            <p>Có chỉ định từ bác sĩ</p>
+          </a>
+          <a href="#" class="category-card">
+            <i class="fa-solid fa-stethoscope"></i>
+            <h3>Thiết bị y tế</h3>
+            <p>Dụng cụ chăm sóc</p>
+          </a>
+          <a href="#" class="category-card">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Thực phẩm chức năng</h3>
+            <p>Bổ sung sức khỏe</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="section-header">
+          <h2 class="section-title">Sản phẩm bán chạy</h2>
+          <a href="#" class="see-all">Xem tất cả →</a>
+        </div>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="/bg/product/vitaminc.jpg" alt="Vitamin C 1000mg" />
+            <h3>Vitamin C 1000mg</h3>
+            <p class="description">Tuýp 20 viên sủi</p>
+            <div class="price-row">
+              <span class="price">250.000đ</span>
+              <button class="add-to-cart-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/bg/product/paracetamol.jpg" alt="Paracetamol 500mg" />
+            <h3>Paracetamol 500mg</h3>
+            <p class="description">Hộp 10 vỉ x 10 viên</p>
+            <div class="price-row">
+              <span class="price">55.000đ</span>
+              <button class="add-to-cart-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/bg/product/gelruatay.jpg" alt="Gel rửa tay khô" />
+            <h3>Gel rửa tay khô</h3>
+            <p class="description">Chai 500ml</p>
+            <div class="price-row">
+              <span class="price">45.000đ</span>
+              <button class="add-to-cart-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="/bg/product/omega3.webp" alt="Omega 3 Fish Oil" />
+            <h3>Omega 3 Fish Oil</h3>
+            <p class="description">Hộp 100 viên</p>
+            <div class="price-row">
+              <span class="price">280.000đ</span>
+              <button class="add-to-cart-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.9 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-layout">
+        <aside class="filters">
+          <h4>Bộ lọc</h4>
+
+          <div class="filter-group price">
+            <h5>Mức giá</h5>
+            <div class="filter-option">
+              <input type="radio" id="price1" name="price" />
+              <label for="price1">Dưới 100.000đ</label>
+            </div>
+            <div class="filter-option">
+              <input type="radio" id="price2" name="price" />
+              <label for="price2">100.000đ - 200.000đ</label>
+            </div>
+          </div>
+
+          <div class="filter-group type">
+            <h5>Dạng bào chế</h5>
+            <div class="filter-option">
+              <input type="checkbox" id="type1" name="type1" />
+              <label for="type1">Viên nén</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type2" name="type2" />
+              <label for="type2">Viên sủi</label>
+            </div>
+            <div class="filter-option">
+              <input type="checkbox" id="type3" name="type3" />
+              <label for="type3">Siro</label>
+            </div>
+          </div>
+        </aside>
+
+        <main class="product-listing">
+          <h2 class="section-title">Thuốc không kê đơn</h2>
+          <div class="listing-header">
+            <p>Hiển thị 1-12 trong 156 sản phẩm</p>
+            <select name="sort" id="sort">
+              <option value="default">Sắp xếp theo...</option>
+              <option value="price-asc">Sắp xếp theo giá tăng dần</option>
+              <option value="price-desc">Sắp xếp theo giá giảm dần</option>
+            </select>
+          </div>
+
+          <div class="product-grid-listing">
+            <div class="product-card">
+              <img src="/bg/product/paracetamol.jpg" alt="Paracetamol 500mg" />
+              <h3>Paracetamol 500mg</h3>
+              <p class="description">Hộp 100 viên</p>
+              <span class="price">55.000đ</span>
+              <span class="real-price">55000</span>
+              <span class="product-type">Viên nén</span>
+              <button class="btn-primary-full">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+              <img src="/bg/product/ibuprofen.jpg" alt="Ibuprofen 400mg" />
+              <h3>Ibuprofen 400mg</h3>
+              <p class="description">Hộp 30 viên</p>
+              <span class="price">45.000đ</span>
+              <span class="real-price">45000</span>
+              <span class="product-type">Viên nén</span>
+              <button class="btn-primary-full">Thêm vào giỏ</button>
+            </div>
+            <div class="product-card">
+              <img src="/bg/product/prospan.jpg" alt="Siro ho Prospan" />
+              <h3>Siro ho Prospan</h3>
+              <p class="description">Chai 100ml</p>
+              <span class="price">172.000đ</span>
+              <span class="real-price">172000</span>
+              <span class="product-type">Chai</span>
+              <button class="btn-disabled-full" disabled>Hết hàng</button>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+
+    <section class="footer">
+      <div class="footer-logo"><img src="/bg/logo.png" alt="" /></div>
+      <div class="footer-contact">
+        <h1>Medicare-Lựa chọn số một</h1>
+        <p id="footer-location">
+          <i class="fa-solid fa-location-dot"></i>120 Yên Lãng, Đống Đa, Hà Nội
+        </p>
+        <p><i class="fa-solid fa-phone"></i>0123-456-789</p>
+        <p><i class="fa-solid fa-envelope"></i>example@gmail.com</p>
+        <div class="line"></div>
+        <div class="platform">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <div class="footer-something">
+        <div class="about-us">
+          <h1>Về chúng tôi</h1>
+          <a href="#hero">Trang chủ</a>
+          <a href="#about">Tổng quan</a>
+          <a href="#why-choice-container">Hoạt động thường ngày</a>
+          <a href="#certification">Chứng nhận GPP</a>
+        </div>
+
+        <div class="contact-us">
+          <h1>Liên hệ</h1>
+          <a href="/contact/contact.html">Liên hệ ngay</a>
+        </div>
+        <div class="product">
+          <h1>Sản phẩm</h1>
+          <a href="">Thuốc theo đơn</a>
+          <a href="">Thuốc không theo đơn</a>
+          <a href="">Thực phẩm chức năng</a>
+          <a href="">Sản phẩm bán chạy</a>
+        </div>
+      </div>
+    </section>
+    <script src="product.js"></script>
+  </body>
+</html>

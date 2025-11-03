@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="image">
+      <img src="/bg/PHARMACY CHAINS.png" alt="" />
+    </section>
+    <section class="hero">
+      <div class="logo"><img src="/bg/logo.png" alt="" /></div>
+      <div class="wrapper">
+        <div class="form-box login" id="login-box">
+          <h2>Login</h2>
+          <p class="firts-p">
+            Login to your account <a href="/index/index.html">Medicare</a>
+          </p>
+          <form class="form" action="">
+            <div class="input-box">
+              <span class="icon"> <i class="fa-solid fa-envelope"></i></span>
+              <input type="text" id="emailLog" required />
+              <label for="">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"
+                ><i class="fa-solid fa-eye" id="eye"></i>
+                <i class="fa-solid fa-eye-slash" id="eye-slash"></i>
+              </span>
+
+              <input type="password" id="passwordLog" required />
+              <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+              <label for="">
+                <input type="checkbox" /><span style="padding-left: 5px"
+                  >Remember me</span
+                ></label
+              >
+              <a href="">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn" id="btnLogin">Login</button>
+            <div class="login-register">
+              <p>
+                Don't have an account?
+                <a href="" class="register-link" id="register-link">Register</a>
+              </p>
+            </div>
+            <div class="line">
+              <div class="child-line"></div>
+              <p>OR</p>
+              <div class="child-line"></div>
+            </div>
+
+            <button class="btn google">
+              <img src="/bg/google.webp" alt="" /><span>Login with Google</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="form-box register" id="register-box">
+          <h2>Register</h2>
+          <p class="firts-p">
+            Create your account for <a href="/index/index.html">Medicare</a>
+          </p>
+          <form class="form" action="">
+            <div class="input-box">
+              <span class="icon"> <i class="fa-solid fa-envelope"></i></span>
+              <input type="text" required id="email-res" />
+              <label for="">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"
+                ><i class="fa-solid fa-eye" id="eye"></i>
+                <i class="fa-solid fa-eye-slash" id="eye-slash"></i>
+              </span>
+              <input type="password" id="password-res" required />
+              <label>Password</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"
+                ><i class="fa-solid fa-eye" id="eye"></i>
+                <i class="fa-solid fa-eye-slash" id="eye-slash"></i>
+              </span>
+              <input type="password" id="password-res" required />
+              <label>Confirm Password</label>
+            </div>
+
+            <div class="agree">
+              <label for=""
+                ><input type="checkbox" /><span
+                  >I agree to the terms & conditions</span
+                ></label
+              >
+            </div>
+            <button type="submit" class="btn" id="btnRegister">Register</button>
+            <div class="login-register">
+              <p>
+                Already have an account?
+                <a href="#" class="login-link" id="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="login.js"></script>
+  </body>
+</html>
