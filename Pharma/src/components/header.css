@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 * {
@@ -46,6 +46,7 @@ header {
   height: 100px;
   left: 6%;
   display: flex;
+  cursor: pointer;
 
   /* align-items: flex-start; */
 }

@@ -1,5 +1,6 @@
 import { Header } from "../components/header";
 import "./Contact.css";
+import { Footer } from "../components/footer";
 export function Contact() {
   return (
     <>
@@ -34,6 +35,7 @@ export function Contact() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
