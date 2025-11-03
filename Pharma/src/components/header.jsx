@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from "react";
 import {
   initializeHeaderScrollLogic,
   initializeProductDropdownLogic,
-  initializeNavigationLogic,
 } from "../pages/index.js"; // Thay đổi đường dẫn import nếu cần
 
 export function Header() {
@@ -30,14 +29,16 @@ export function Header() {
   }, []);
 
   // 4. Gọi logic navigation (login) trong useEffect
-  useEffect(() => {
-    return initializeNavigationLogic();
-  }, []);
-
+  const handleLoginClick = () => {
+    window.location.href = "https://www.facebook.com/minh.doan.673749";
+  };
+  const handleLogoClick = () => {
+    window.location.href = "/";
+  };
   return (
     // 5. Gán ref vào các phần tử tương ứng
     <header id="header" ref={headerRef}>
-      <div className="logo" id="logo">
+      <div className="logo" id="logo" onClick={handleLogoClick}>
         <img src="images/logo.png" alt="" />
       </div>
       <nav className="navigation">
@@ -69,7 +70,9 @@ export function Header() {
           required
           placeholder="Tìm tên thuốc"
         />
-        <button className="btnLogin-popup">Login</button>
+        <button className="btnLogin-popup" onClick={handleLoginClick}>
+          Login
+        </button>
         <button className="btnShoppingCart">
           <i className="fa-solid fa-cart-shopping"></i> Giỏ hàng
         </button>

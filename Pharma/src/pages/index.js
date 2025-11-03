@@ -145,15 +145,6 @@ export function initializeNavigationLogic() {
         "https://www.google.com/maps/place/120+P.Y%C3%AAn+L%C3%A3ng,+Th%E1%BB%8Bnh+Quang,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i+100000,+Vietnam/@21.0101303,105.8127533,17z/data=!3m1!4b1!4m6!3m5!1s0x3135ac9d65911ef1:0x6a4df45cca423e18!8m2!3d21.0101303!4d105.8153282!16s%2Fg%2F11xzq7y1bt?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D";
     };
     map.addEventListener("click", handleMapClick);
-    return () => map.removeEventListener("click", handleMapClick);
-  }
-
-  const LoginLink = document.querySelector(".btnLogin-popup");
-  if (LoginLink) {
-    const handleLoginClick = () => {
-      window.location.href = "/login/login.html";
-    };
-    LoginLink.addEventListener("click", handleLoginClick);
-    return () => LoginLink.removeEventListener("click", handleLoginClick);
+    return () => map.removeEventListener("click", handleMapClick); //clear
   }
 }
