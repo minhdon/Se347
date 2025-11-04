@@ -1,32 +1,36 @@
 import { Header } from "../components/header";
-import "./Contact.css";
+import styles from "./Contact.module.css";
 import { Footer } from "../components/footer";
+//trong module css phai dung [] cho các class có tên chưa dấu -
+
 export function Contact() {
   return (
     <>
       <Header />
 
-      <section class="section">
-        <i class="fa-solid fa-handshake"></i>
+      <section className={styles.section}>
+        {/* Lớp global (Font Awesome) được giữ nguyên */}
+        <i className="fa-solid fa-handshake"></i>
         <h1>CONTACT US</h1>
-        <div class="frame">
-          <div class="input">
-            <div class="input-box">
+        <div className={styles.frame}>
+          <div className={styles.input}>
+            <div className={styles["input-box"]}>
               <input type="text" required />
-              <label for="">Your Name</label>
+              {/* 'for' được đổi thành 'htmlFor' trong React */}
+              <label htmlFor="">Your Name</label>
             </div>
 
-            <div class="input-box">
-              <input type="email" required /> <label for="">Email</label>
+            <div className={styles["input-box"]}>
+              <input type="email" required /> <label htmlFor="">Email</label>
             </div>
 
-            <div class="input-box">
+            <div className={styles["input-box"]}>
               <input type="text" required />
-              <label for="">Message</label>
+              <label htmlFor="">Message</label>
             </div>
           </div>
           <button>Contact us</button>
-          <div class="contact-info">
+          <div className={styles["contact-info"]}>
             <h2>Contact</h2>
             <p>examle@gmail.com</p>
             <h2>Based in</h2>

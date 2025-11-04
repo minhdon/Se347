@@ -30,7 +30,7 @@ export function Header() {
 
   // 4. Gọi logic navigation (login) trong useEffect
   const handleLoginClick = () => {
-    window.location.href = "https://www.facebook.com/minh.doan.673749";
+    window.location.href = "/Login";
   };
   const handleLogoClick = () => {
     window.location.href = "/";

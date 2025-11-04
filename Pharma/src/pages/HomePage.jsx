@@ -1,12 +1,9 @@
-import "./index.css";
+import styles from "./HomePage.module.css";
 import { Header } from "../components/header.jsx";
 import React, { useEffect } from "react";
 import { Footer } from "../components/footer.jsx";
 
-import {
-  initializeCarouselLogic,
-  initializeNavigationLogic, // Cần thêm vào Index nếu bạn muốn xử lý click map ở đây
-} from "./index.js";
+import { initializeCarouselLogic, initializeNavigationLogic } from "./index.js";
 
 export function Index() {
   useEffect(() => {
@@ -16,9 +13,8 @@ export function Index() {
       "nextBtn",
       620
     );
-  }, []); // [] đảm bảo chỉ chạy 1 lần sau khi mount
+  }, []);
 
-  // Gọi logic Carousel cho Feedback
   useEffect(() => {
     return initializeCarouselLogic(
       ".feedback-slide",
@@ -28,7 +24,6 @@ export function Index() {
     );
   }, []);
 
-  // Gọi logic navigation (map) trong useEffect
   useEffect(() => {
     return initializeNavigationLogic();
   }, []);
@@ -36,9 +31,9 @@ export function Index() {
   return (
     <>
       <Header />
-      <section className="hero" id="hero">
+      <section className={styles.hero} id="hero">
         <img src="/images/anh duoc si.png" alt="" /> {/* Sửa đường dẫn */}
-        <div className="content">
+        <div className={styles.content}>
           <h1>
             Improving Your Health <br />
             With Medicare
@@ -48,18 +43,18 @@ export function Index() {
             <br />
             to better health.
           </p>
-          <div className="shopping">
+          <div className={styles.shopping}>
             <a href="/product/product.html">Shop Now</a>
             <a href="">Top Product</a>
           </div>
         </div>
       </section>
 
-      <section className="about" id="about">
-        <div className="about-img">
+      <section className={styles.about} id="about">
+        <div className={styles["about-img"]}>
           <img src="/images/logo.png" alt="" /> {/* Sửa đường dẫn */}
         </div>
-        <div className="about-pharma-content">
+        <div className={styles["about-pharma-content"]}>
           <p>
             Được thành lập từ năm 2005, Medicare đã có gần 20 năm đồng hành cùng
             sức khỏe cộng đồng. Trải qua thời gian dài phát triển, nhà thuốc
@@ -69,7 +64,7 @@ export function Index() {
         </div>
       </section>
 
-      <section className="choice">
+      <section className={styles.choice}>
         <h1>
           {/* Sửa style */}
           <span style={{ color: "#2b9474" }}>Medicare</span>
@@ -77,14 +72,14 @@ export function Index() {
         </h1>
       </section>
 
-      <section className="utility">
-        <div className="box box1">
+      <section className={styles.utility}>
+        <div className={`${styles.box} ${styles.box1}`}>
           <i className="fa-solid fa-stethoscope"></i>
           <span>Đội ngũ y bác sĩ giàu kinh nghiệm</span>
           <i className="fa-solid fa-capsules"></i>
           <span>Dược phẩm uy tín hàng đầu</span>
         </div>
-        <div className="box box2">
+        <div className={`${styles.box} ${styles.box2}`}>
           <i className="fa-solid fa-truck"></i>
           <span>Giao hàng 24/7</span>
           <i className="fa-solid fa-handshake"></i>
@@ -92,55 +87,64 @@ export function Index() {
         </div>
       </section>
 
-      <section className="why-choice-container" id="why-choice-container">
+      <section
+        className={styles["why-choice-container"]}
+        id="why-choice-container"
+      >
         <h1>
           <span style={{ color: "#2b9474" }}>Medicare</span>{" "}
           <span style={{ color: "gray" }}>Service</span>
         </h1>
-        <section className="why-choice-wrapper">
-          <div className="why-choice">
-            <div className="why-choice-slide">
+        <section className={styles["why-choice-wrapper"]}>
+          <div className={styles["why-choice"]}>
+            <div className={styles["why-choice-slide"]}>
               {/* Sửa lỗi <i> và đường dẫn ảnh */}
-              <div className="box support">
+              <div className={`${styles.box} ${styles.support}`}>
                 <img src="/images/support.png" alt="" />
               </div>
 
-              <div className="doctor-background-img">
-                <div className="box doctor">
+              <div className={styles["doctor-background-img"]}>
+                <div className={`${styles.box} ${styles.doctor}`}>
                   <img src="/images/doctor.png" alt="" />
                 </div>
               </div>
-              <div className="box medicine">
+              <div className={`${styles.box} ${styles.medicine}`}>
                 <img src="/images/medicine.png" alt="" />
               </div>
-              <div className="box delivery">
+              <div className={`${styles.box} ${styles.delivery}`}>
                 <img src="/images/delivery.png" alt="" />
               </div>
-              <div className="box support">
+              <div className={`${styles.box} ${styles.support}`}>
                 <img src="/images/support.png" alt="" />
               </div>
 
-              <div className="box doctor">
+              <div className={`${styles.box} ${styles.doctor}`}>
                 <img src="/images/doctor.png" alt="" />
               </div>
-              <div className="box medicine"></div>
+              <div className={`${styles.box} ${styles.medicine}`}></div>
             </div>
           </div>
 
-          <button className="carousel-btn prev-btn" id="prevBtn">
+          <button
+            className={`${styles["carousel-btn"]} ${styles["prev-btn"]}`}
+            id="prevBtn"
+          >
             <i className="fa-solid fa-arrow-left"></i>
           </button>
-          <button className="carousel-btn next-btn" id="nextBtn">
+          <button
+            className={`${styles["carousel-btn"]} ${styles["next-btn"]}`}
+            id="nextBtn"
+          >
             <i className="fa-solid fa-arrow-right"></i>
           </button>
         </section>
       </section>
 
-      <section className="certification" id="certification">
-        <div className="image">
+      <section className={styles.certification} id="certification">
+        <div className={styles.image}>
           <img src="/images/gpp.webp" alt="" /> {/* Sửa đường dẫn */}
         </div>
-        <div className="cer-content">
+        <div className={styles["cer-content"]}>
           <h1>
             <span style={{ color: "#42d673" }}>Medicare</span>{" "}
             <span>Certification</span>
@@ -156,15 +160,15 @@ export function Index() {
         </div>
       </section>
 
-      <section className="feedback-container">
+      <section className={styles["feedback-container"]}>
         <h1>
           <span style={{ color: "#2b9474" }}>Customers</span>{" "}
           <span style={{ color: "gray" }}>Feedback</span>
         </h1>
-        <section className="feedback-wrapper">
-          <div className="feedback">
-            <div className="feedback-slide">
-              <div className="box fb4">
+        <section className={styles["feedback-wrapper"]}>
+          <div className={styles.feedback}>
+            <div className={styles["feedback-slide"]}>
+              <div className={`${styles.box} ${styles.fb4}`}>
                 <p>
                   "Đây là nhà thuốc lớn, luôn có đầy đủ các loại thuốc từ thông
                   thường đến chuyên khoa mà tôi cần, không phải đi tìm nhiều
@@ -174,7 +178,7 @@ export function Index() {
                 <h4>Chị Yến Bủm</h4>
               </div>
 
-              <div className="box fb1">
+              <div className={`${styles.box} ${styles.fb1}`}>
                 <p>
                   "Dược sĩ ở đây rất chuyên nghiệp và tận tâm. Tôi bị cảm và ho
                   kéo dài, được dược sĩ hỏi kỹ về triệu chứng, tiền sử bệnh và
@@ -189,7 +193,7 @@ export function Index() {
                 </h4>
               </div>
 
-              <div className="box fb2">
+              <div className={`${styles.box} ${styles.fb2}`}>
                 <p>
                   "Tôi luôn tin tưởng mua thuốc và thực phẩm chức năng ở đây vì
                   sản phẩm luôn là hàng mới, chính hãng, hạn sử dụng còn rất xa.
@@ -201,7 +205,7 @@ export function Index() {
                   <img src="/images/boy.png" alt="" /> Anh Kiệt Võ
                 </h4>
               </div>
-              <div className="box fb3">
+              <div className={`${styles.box} ${styles.fb3}`}>
                 <p>
                   "Tôi rất hài lòng với thái độ phục vụ của nhân viên. Dù đông
                   khách nhưng các bạn luôn niềm nở, thân thiện, trò chuyện rất
@@ -213,7 +217,7 @@ export function Index() {
                   Anh Lực 8 tuổi
                 </h4>
               </div>
-              <div className="box fb4">
+              <div className={`${styles.box} ${styles.fb4}`}>
                 <p>
                   "Đây là nhà thuốc lớn, luôn có đầy đủ các loại thuốc từ thông
                   thường đến chuyên khoa mà tôi cần, không phải đi tìm nhiều
@@ -226,7 +230,7 @@ export function Index() {
                 </h4>
               </div>
 
-              <div className="box fb1">
+              <div className={`${styles.box} ${styles.fb1}`}>
                 <p>
                   "Dược sĩ ở đây rất chuyên nghiệp và tận tâm. Tôi bị cảm và ho
                   kéo dài, được dược sĩ hỏi kỹ về triệu chứng, tiền sử bệnh và
@@ -235,7 +239,7 @@ export function Index() {
                   đã đỡ hơn rất nhiều. Cảm ơn nhà thuốc!"
                 </p>
               </div>
-              <div className="box fb2">
+              <div className={`${styles.box} ${styles.fb2}`}>
                 <p>
                   "Tôi luôn tin tưởng mua thuốc và thực phẩm chức năng ở đây vì
                   sản phẩm luôn là hàng mới, chính hãng, hạn sử dụng còn rất xa.
@@ -247,10 +251,16 @@ export function Index() {
             </div>
           </div>
 
-          <button className="carousel-btn prev-btn" id="fb-prevBtn">
+          <button
+            className={`${styles["carousel-btn"]} ${styles["prev-btn"]}`}
+            id="fb-prevBtn"
+          >
             <i className="fa-solid fa-arrow-left"></i>
           </button>
-          <button className="carousel-btn next-btn" id="fb-nextBtn">
+          <button
+            className={`${styles["carousel-btn"]} ${styles["next-btn"]}`}
+            id="fb-nextBtn"
+          >
             <i className="fa-solid fa-arrow-right"></i>
           </button>
         </section>
