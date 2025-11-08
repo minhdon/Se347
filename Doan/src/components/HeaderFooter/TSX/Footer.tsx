@@ -44,7 +44,7 @@ export const Footer = () => {
 
           <div className={styles["contact-us"]}>
             <h1>Liên hệ</h1>
-            <a href="/contact/contact.html">Liên hệ ngay</a>
+            <a href="/contact">Liên hệ ngay</a>
           </div>
           <div className={styles.product}>
             <h1>Sản phẩm</h1>
