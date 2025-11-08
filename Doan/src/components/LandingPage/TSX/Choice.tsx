@@ -1,4 +1,4 @@
-import styles from "./Choice.module.css";
+import styles from "../CSS/Choice.module.css";
 
 export const Choice = () => (
   <>

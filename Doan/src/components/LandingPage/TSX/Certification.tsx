@@ -1,4 +1,4 @@
-import styles from "./Certification.module.css";
+import styles from "../CSS/Certification.module.css";
 
 export const Certification = () => {
   return (

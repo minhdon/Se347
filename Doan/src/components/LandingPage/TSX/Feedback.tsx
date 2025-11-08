@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "./Feedback.module.css";
+import styles from "../CSS/Feedback.module.css";
 
 export const Feedback = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

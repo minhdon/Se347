@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
-import styles from "./Header.module.css";
+import { useRef, useState, useEffect } from "react";
+import styles from "../CSS/Header.module.css";
 
 export const Header = () => {
   const timerRef = useRef<number | null>(null);
   const [isProductList, setIsProductList] = useState(false);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   const handleProductMouseEnter = () => {
     if (timerRef.current) {
@@ -11,17 +13,39 @@ export const Header = () => {
     }
     setIsProductList(true);
   };
+
   const handleProductMouseLeave = () => {
     timerRef.current = setTimeout(() => {
       setIsProductList(false);
     }, 100);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsHeaderHidden(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setIsHeaderHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const productList = isProductList ? styles.active : "";
+  const headerHidden = isHeaderHidden ? styles["header-hidden"] : "";
 
   return (
     <>
-      <header id="header">
+      <header id="header" className={headerHidden}>
         <div className={styles.logo}>
           <img src="/images/logo.png" alt="Logo công ty" />
         </div>

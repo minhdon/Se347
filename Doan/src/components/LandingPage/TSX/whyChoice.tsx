@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import styles from "./WhyChoice.module.css";
+import styles from "../CSS/WhyChoice.module.css";
 
 export const WhyChoice = () => {
   const slideRef = useRef<HTMLDivElement>(null);
