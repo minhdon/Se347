@@ -39,6 +39,9 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const landingPageLink = () => {
+    window.location.href = "/";
+  };
 
   const productList = isProductList ? styles.active : "";
   const headerHidden = isHeaderHidden ? styles["header-hidden"] : "";
@@ -47,11 +50,15 @@ export const Header = () => {
     <>
       <header id="header" className={headerHidden}>
         <div className={styles.logo}>
-          <img src="/images/logo.png" alt="Logo công ty" />
+          <img
+            src="/images/logo.png"
+            alt="Logo công ty"
+            onClick={landingPageLink}
+          />
         </div>
 
         <nav className={styles.navigation}>
-          <a href="/contact/contact.html">Contact</a>
+          <a href="/contact">Contact</a>
           <a
             href="/product/product.html"
             className={styles.product}
