@@ -14,7 +14,6 @@ header {
   border-bottom: 2px solid #ccc;
   border-radius: 10px;
   transition: 0.5s;
-  overflow-y: hidden;
 }
 
 .header-hidden {

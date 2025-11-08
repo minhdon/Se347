@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import styles from "./Header.module.css";
 
-// Bạn đang export theo tên (named export), điều này là đúng
 export const Header = () => {
   const timerRef = useRef<number | null>(null);
   const [isProductList, setIsProductList] = useState(false);
