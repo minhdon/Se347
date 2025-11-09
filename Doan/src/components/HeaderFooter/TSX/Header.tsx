@@ -42,10 +42,9 @@ export const Header = () => {
   const landingPageLink = () => {
     window.location.href = "/";
   };
-  const loginPageLink=()=>
-  {
-    window.location.href="/login"
-  }
+  const loginPageLink = () => {
+    window.location.href = "/login";
+  };
 
   const productList = isProductList ? styles.active : "";
   const headerHidden = isHeaderHidden ? styles["header-hidden"] : "";
@@ -64,7 +63,7 @@ export const Header = () => {
         <nav className={styles.navigation}>
           <a href="/contact">Contact</a>
           <a
-            href="/product/product.html"
+            href="/product"
             className={styles.product}
             id="product"
             onMouseEnter={handleProductMouseEnter}
@@ -91,7 +90,9 @@ export const Header = () => {
             required
             placeholder="Tìm tên thuốc"
           />
-          <button className={styles["btnLogin-popup"]} onClick={loginPageLink} >Login</button>{" "}
+          <button className={styles["btnLogin-popup"]} onClick={loginPageLink}>
+            Login
+          </button>{" "}
           <button className={styles["btnShoppingCart"]}>
             {" "}
             <i className="fa-solid fa-cart-shopping"></i> Giỏ hàng

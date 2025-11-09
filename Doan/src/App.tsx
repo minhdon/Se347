@@ -1,10 +1,11 @@
 import React from "react";
-import LandingPage from "./pages/LandingPage";
+import LandingPage from "./pages/TSX/LandingPage";
 import { Route, Routes } from "react-router";
-import ContactPage from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage";
-import { Register } from "./components/Register/TSX/Register";
-import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import ContactPage from "./pages/TSX/ContactPage";
+import LoginPage from "./pages/TSX/LoginPage";
+import RegisterPage from "./pages/TSX/RegisterPage";
+import ForgotPasswordPage from "./pages/TSX/ForgotPasswordPage";
+import ProductPage from "./pages/TSX/ProductPage";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/Contact" element={<ContactPage />}></Route>
         <Route path="/Login" element={<LoginPage />}></Route>
-        <Route path="/Register" element={<Register />}></Route>
+        <Route path="/Register" element={<RegisterPage />}></Route>
         <Route path="/ForgotPassword" element={<ForgotPasswordPage />}></Route>
+        <Route path="/Product" element={<ProductPage />}></Route>
       </Routes>
     </>
   );

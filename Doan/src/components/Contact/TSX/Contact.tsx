@@ -1,12 +1,9 @@
-import { Footer } from "../../HeaderFooter/TSX/Footer";
-import { Header } from "../../HeaderFooter/TSX/Header";
 // Đã thêm 'styles' import trở lại
 import styles from "../CSS/Contact.module.css";
 
 export const Contact = () => {
   return (
     <>
-      <Header />
       {/* Thay đổi className="section" -> className={styles.section} */}
       <section className={styles.section}>
         {/* Lớp Font Awesome này được giữ nguyên, KHÔNG dùng styles.* */}
@@ -48,7 +45,6 @@ export const Contact = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

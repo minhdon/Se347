@@ -1,0 +1,7 @@
+.shop-layout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+  box-sizing: border-box;
+}

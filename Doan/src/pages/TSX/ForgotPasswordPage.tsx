@@ -1,5 +1,5 @@
 import React from "react";
-import { ForgotPassword } from "../components/ForgotPassword/TSX/ForgotPassword";
+import { ForgotPassword } from "../../components/ForgotPassword/TSX/ForgotPassword";
 
 function ForgotPasswordPage() {
   return (
