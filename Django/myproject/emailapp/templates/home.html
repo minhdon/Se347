@@ -110,11 +110,31 @@
   const searchInput = document.getElementById("searchInput");
   const emailCheckboxes = document.querySelectorAll(".email-checkbox");
 
+  const getQueryParam = (name) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  };
+
+  const restoreSearchQuery = () => {
+    const query = getQueryParam("q");
+    if (query) {
+      searchInput.value = query;
+    }
+  };
+
   const performSearch = () => {
     const query = searchInput.value;
 
-    window.location.href = `/?q=${query}`;
+    if (query) {
+      window.location.href = `/?q=${query}`;
+    } else {
+      window.location.href = `/`;
+    }
   };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    restoreSearchQuery();
+  });
 
   btnSearch.addEventListener("click", () => {
     performSearch();
@@ -125,7 +145,4 @@
       performSearch();
     }
   });
-
-  const detail_email = document.getElementById("eachEmail");
-  detail_email.addEventListener("click", () => {});
 </script>
