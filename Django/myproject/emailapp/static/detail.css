@@ -1,0 +1,10 @@
+.hero {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(213, 206, 206);
+  border-radius: 50px;
+  flex-direction: column;
+  align-items: center;
+}
