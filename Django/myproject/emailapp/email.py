@@ -5,9 +5,9 @@ class Email:
         self.description=description
         self.time=time
         self.status=status
-EMAIL_STORE=[ Email(0,'Thong bao lich phong van','Phong van luc 14h','04/05/2025',False),
-        Email(1,'Ket qua  phong van','Chuc mung ban','04/05/2025',True),
-        Email(2,'Thong bao lich lam viec','Thu 2 - thu 6','04/05/2025',True)
+EMAIL_STORE=[ Email(0,'Thông báo lịch phỏng vấn','Phỏng vấn lúc 14h tại phòng số 2','01/05/2025',False),
+        Email(1,'Kết quả phỏng vấn','Chúc mừng bạn đã đậu phỏng vấn','04/05/2025',True),
+        Email(2,'Thông báo lịch làm việc','8h hằng ngày từ thứ 2 đến thứ 6','08/05/2025',True)
         ]
 def get_Email_list():
     return EMAIL_STORE
@@ -19,7 +19,7 @@ def  delete_Email_by_id(id):
     global EMAIL_STORE
     EMAIL_STORE=[email for email in EMAIL_STORE if email.id != id]
 def generate_new_id():
-    """Tạo ID mới bằng cách tìm ID lớn nhất hiện có và + 1."""
+   
     if not EMAIL_STORE:
         return 1
 

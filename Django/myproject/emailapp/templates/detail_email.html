@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% load static%}
+    {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="{% static 'detail.css' %}" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>Email Detail</title>
+    <title>Chi tiết Email</title>
   </head>
   <body>
-    <section class="hero">
-      <h1>{{email.title}}</h1>
-      <h2>{{email.description}}</h2>
-      <h2>{{email.time}}</h2>
-      <a class="home" href="/">Quay ve trang chu</a>
-    </section>
+    <div class="main-container">
+      <div class="nav-bar">
+        <a class="btn-back" href="/">
+          <i class="fas fa-arrow-left"></i> Quay về trang chủ
+        </a>
+      </div>
+
+      <section class="email-card">
+        <div class="email-header">
+          <h1 class="email-subject">{{email.title}}</h1>
+          <div class="email-meta">
+            <span class="date"
+              ><i class="far fa-clock"></i> {{email.time}}</span
+            >
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="email-body">{{email.description|linebreaks}}</div>
+      </section>
+    </div>
   </body>
 </html>
