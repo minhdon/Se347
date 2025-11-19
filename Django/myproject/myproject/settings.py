@@ -33,7 +33,7 @@ DEBUG = os.environ.get('VERCEL') is None
 
 # Khi DEBUG=False, Django sẽ yêu cầu ALLOWED_HOSTS hợp lệ
 ALLOWED_HOSTS = [
-    'email14.vercel.app', 
+    'email15.vercel.app', 
     '.now.sh',
     '127.0.0.1', 
     'localhost'
