@@ -16,10 +16,10 @@ def detail_email(request,id):
      return render(request, 'detail_email.html',{'email':email})
 def search_email(request):
      query=request.GET.get('q')
-     page=request.GET.get('page',1)
+     
      return JsonResponse({
-          'query':query,
-          'page':page
+          'query':query
+         
      })
 def delete_email(request,id):
      if request.method=="POST":     
