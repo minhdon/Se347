@@ -142,3 +142,6 @@ STATICFILES_DIRS = [
     # nhưng thêm vào để đảm bảo
     os.path.join(BASE_DIR, 'emailapp/static'),
 ]
+
+import pymysql
+pymysql.install_as_MySQLdb()
