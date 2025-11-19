@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import pymysql 
-pymysql.install_as_MySQLdb
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,15 +23,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-klurhj@r7)44922ovgqeskzw-zhi+!q4z#ts7$70l&n=1fu80-'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-klurhj@r7)44922ovgqeskzw-zhi+!q4z#ts7$70l&n=1fu80-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Nếu Vercel đặt biến môi trường 'VERCEL', chúng ta coi đây là môi trường Production
+DEBUG = os.environ.get('VERCEL') is None 
+# Nếu không có biến VERCEL (tức là đang chạy local), DEBUG=True. Nếu có, DEBUG=False.
 
-ALLOWED_HOSTS = ['email12.vercel.app', 
-    '.now.sh', # Tên miền cũ, đôi khi vẫn cần
+# Khi DEBUG=False, Django sẽ yêu cầu ALLOWED_HOSTS hợp lệ
+ALLOWED_HOSTS = [
+    'email13.vercel.app', 
+    '.now.sh',
     '127.0.0.1', 
-    'localhost']
+    'localhost'
+]
 
 
 # Application definition
@@ -82,14 +88,14 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'email-app',
-        'USER':'root',
-        'PASSWORD':'01645348473@An',
-        'HOST':'localhost',
-        'POST':'3306'
+        # Đảm bảo bạn đã nhập 'import os' ở đầu file (đã có)
+        'NAME': os.environ.get('DB_NAME', 'email-app'),
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', '01645348473@An'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '3306'), # ✅ Sửa POST thành PORT
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -142,6 +148,3 @@ STATICFILES_DIRS = [
     # nhưng thêm vào để đảm bảo
     os.path.join(BASE_DIR, 'emailapp/static'),
 ]
-
-import pymysql
-pymysql.install_as_MySQLdb()
