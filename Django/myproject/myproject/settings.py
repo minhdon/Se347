@@ -28,7 +28,10 @@ SECRET_KEY = 'django-insecure-klurhj@r7)44922ovgqeskzw-zhi+!q4z#ts7$70l&n=1fu80-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['email10.vercel.app', 
+    '.now.sh', # Tên miền cũ, đôi khi vẫn cần
+    '127.0.0.1', 
+    'localhost']
 
 
 # Application definition
